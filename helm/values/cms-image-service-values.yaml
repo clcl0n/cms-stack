@@ -1,0 +1,27 @@
+metadata:
+  namespace: cms
+spec:
+  replicas: 1
+  template:
+    spec:
+      image: ghcr.io/clcl0n/cms-image-service:latest
+
+configuration:
+  connectionStrings:
+    mongoDb: mongodb://172.27.144.40:27017/cms-image-service?directConnection=true&tls=false&authSource=admin
+  messagingBroker:
+    rabbitMq:
+      hostName: 172.27.144.40
+      port: 5672
+      userName: rabbitmq
+      password: rabbitmq
+      virtualHost: /
+      ssl:
+        enabled: false
+  externalStorage:
+    s3ObjectStorage:
+      accessKey: 5swEPvLY7pu8r7Aj8CbS
+      secretKey: W4YAa2cwTsc15a9b3xvwt9RfcI0dpeZi8q1zGyxR
+      serviceUrl: http://172.27.144.40:9000
+      imageBucketName: images
+      forcePathStyle: true

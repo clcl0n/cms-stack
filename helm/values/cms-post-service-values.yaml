@@ -1,0 +1,20 @@
+metadata:
+  namespace: cms
+spec:
+  replicas: 1
+  template:
+    spec:
+      image: ghcr.io/clcl0n/cms-post-service:latest
+
+configuration:
+  connectionStrings:
+    postgres: Server=172.27.144.40;Port=5432;User Id=postgres;Password=postgres;Database=cms-post-service;Command Timeout=600;SSL Mode=Disable
+  messagingBroker:
+    rabbitMq:
+      hostName: 172.27.144.40
+      port: 5672
+      userName: rabbitmq
+      password: rabbitmq
+      virtualHost: /
+      ssl:
+        enabled: false
