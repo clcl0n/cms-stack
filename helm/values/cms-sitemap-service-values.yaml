@@ -8,10 +8,10 @@ spec:
 
 configuration:
   connectionStrings:
-    mongoDb: mongodb://172.27.144.40:27017/cms-sitemap-service?directConnection=true&tls=false&authSource=admin
+    mongoDb: mongodb://server:27017/cms-sitemap-service?directConnection=true&tls=false&authSource=admin
   messagingBroker:
     rabbitMq:
-      hostName: 172.27.144.40
+      hostName: server
       port: 5672
       userName: rabbitmq
       password: rabbitmq

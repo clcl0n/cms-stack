@@ -8,10 +8,10 @@ spec:
 
 configuration:
   connectionStrings:
-    postgres: Server=172.27.144.40;Port=5432;User Id=postgres;Password=postgres;Database=cms-route-service;Command Timeout=600;SSL Mode=Disable
+    postgres: Server=server;Port=5432;User Id=postgres;Password=postgres;Database=cms-route-service;Command Timeout=600;SSL Mode=Disable
   messagingBroker:
     rabbitMq:
-      hostName: 172.27.144.40
+      hostName: server
       port: 5672
       userName: rabbitmq
       password: rabbitmq
